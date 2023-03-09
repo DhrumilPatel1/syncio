@@ -11,11 +11,7 @@ const ProductStore = () => {
     const [value, setValue] = useState([])
 
     const items = [
-        { label: 'New York', value: 'NY' },
-        { label: 'Rome', value: 'RM' },
-        { label: 'London', value: 'LDN' },
-        { label: 'Istanbul', value: 'IST' },
-        { label: 'Paris', value: 'PRS' }
+        { label: 'rocksolidshop.myshopify.com', value: 'rocksolidshop.myshopify.com' },
     ];
 
     // const searchItems = () => {
@@ -48,10 +44,7 @@ const ProductStore = () => {
                         </AutoComplete>
                     </Fieldset> */}
                     <Fieldset legend={legendTemplate}>
-                        <span className="p-float-label">
-                            <Dropdown id="multiselect" options={items} value={value} onChange={(e) => setValue(e.value)} optionLabel="label" />
-                            <label htmlFor="multiselect">Select a Source store</label>
-                        </span>
+                        <Dropdown id="multiselect" options={items} value={value} onChange={(e) => setValue(e.value)} optionLabel="label" />
                     </Fieldset>
                 </div>
             </div>

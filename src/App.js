@@ -49,6 +49,7 @@ import DestinationDataTable from './components/DestinationDataTable';
 import ProductStore from './components/ProductStore';
 import ProductDestination from './components/ProductDestination';
 import ProductSettings from './components/ProductSettings';
+import ProductDestinationSettings from './components/ProductDestinationSettings';
 
 const App = () => {
     const [menuActive, setMenuActive] = useState(false);
@@ -133,7 +134,7 @@ const App = () => {
         {
             label: 'Settings',
             icon: 'pi pi-fw pi-cog',
-            items: [{ label: 'Product Settings', icon: 'pi pi-fw pi-cog', to: '/product-settings' }]
+            items: [{ label: 'Product Settings', icon: 'pi pi-fw pi-cog', to: '/sync-store-config' }]
         },
         // {
         //     label: 'UI Kit',
@@ -286,7 +287,6 @@ const App = () => {
     };
 
     const changeColorScheme = (e) => {
-        console.log({ e });
         setColorScheme(e.value);
 
         const scheme = e.value;
@@ -604,7 +604,8 @@ const App = () => {
                         <Route path="/storeDestination" element={<DestinationDataTable />} />
                         <Route path="/products" element={<ProductStore />} />
                         <Route path="/productDestination" element={<ProductDestination />} />
-                        <Route path="/product-settings" element={<ProductSettings />} />
+                        <Route path="/sync-store-config" element={<ProductSettings />} />
+                        <Route path="/sync-destination-config" element={<ProductDestinationSettings />} />
                         <Route path="/input" element={<InputDemo />} />
                         <Route path="/floatlabel" element={<FloatLabelDemo />} />
                         <Route path="/invalidstate" element={<InvalidStateDemo />} />

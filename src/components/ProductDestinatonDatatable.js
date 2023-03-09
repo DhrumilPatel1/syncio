@@ -14,17 +14,33 @@ const ProductDestinatonDatatable = () => {
     const [selectedProducts, setSelectedProducts] = useState(null);
     const [submitted, setSubmitted] = useState(false);
     const [globalFilter, setGlobalFilter] = useState(null);
-    const [selectedCity, setSelectedCity] = useState(null);
+    const [selectedSales, setSelectedSales] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedVendors, setSelectedVendors] = useState(null);
+    const [selectedStatus, setSelectedStatus] = useState(null);
     const [checked, setChecked] = useState(false);
     const toast = useRef(null);
     const dt = useRef(null);
 
-    const cities = [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Paris', code: 'PRS' }
+    const sales = [
+        { name: 'All', code: 'all' },
+        { name: 'Online Store', code: 'onlineStore' },
+    ];
+
+    const productItem = [
+        { name: 'All', code: 'all' },
+        { name: 'Diamond', code: 'diamond' },
+    ];
+
+    const vendors = [
+        { name: 'All', code: 'all' },
+        { name: 'Diamond', code: 'diamond' },
+    ];
+
+    const status = [
+        { name: 'All', code: 'all' },
+        { name: 'Synced', code: 'synced' },
+        { name: 'Not Synced', code: 'notSynced' },
     ];
 
     useEffect(() => {
@@ -111,36 +127,36 @@ const ProductDestinatonDatatable = () => {
                     <div className='grid'>
                         <div className='col-12 md:col-3'>
                             <Dropdown
-                                value={selectedCity}
-                                onChange={(e) => setSelectedCity(e.value)}
-                                options={cities}
+                                value={selectedSales}
+                                onChange={(e) => setSelectedSales(e.value)}
+                                options={sales}
                                 optionLabel="name"
                                 placeholder="Sales Channel Visibility"
                                 className="w-full" />
                         </div>
                         <div className='col-12 md:col-3'>
                             <Dropdown
-                                value={selectedCity}
-                                onChange={(e) => setSelectedCity(e.value)}
-                                options={cities}
+                                value={selectedProduct}
+                                onChange={(e) => setSelectedProduct(e.value)}
+                                options={productItem}
                                 optionLabel="name"
                                 placeholder="Product Type"
                                 className="w-full" />
                         </div>
                         <div className='col-12 md:col-3'>
                             <Dropdown
-                                value={selectedCity}
-                                onChange={(e) => setSelectedCity(e.value)}
-                                options={cities}
+                                value={selectedVendors}
+                                onChange={(e) => setSelectedVendors(e.value)}
+                                options={vendors}
                                 optionLabel="name"
                                 placeholder="Vendor"
                                 className="w-full" />
                         </div>
                         <div className='col-12 md:col-3'>
                             <Dropdown
-                                value={selectedCity}
-                                onChange={(e) => setSelectedCity(e.value)}
-                                options={cities}
+                                value={selectedStatus}
+                                onChange={(e) => setSelectedStatus(e.value)}
+                                options={status}
                                 optionLabel="name"
                                 placeholder="Status"
                                 className="w-full" />

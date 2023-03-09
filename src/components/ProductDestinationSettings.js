@@ -1,17 +1,14 @@
 import { TabMenu } from 'primereact/tabmenu'
 import React, { useState } from 'react'
-import ProductTab from './ProductTab';
-import VariantTab from './VariantTab';
+import ProductDestinationTab from './ProductDestinationTab';
 
-const ProductSettings = () => {
+const ProductDestinationSettings = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const checkActiveIndex = () => {
         switch (activeIndex) {
             case 0:
-                return <ProductTab />
-            case 1:
-                return <VariantTab />
+                return <ProductDestinationTab />
             default:
                 return null
         }
@@ -21,14 +18,12 @@ const ProductSettings = () => {
         {
             label: 'PRODUCT'
         },
-        {
-            label: 'VARIANT'
-        },
+
     ];
 
     return (
         <div>
-            <h5 className="font-bold mt-0 text-color-secondary">Manage how your products sync with your connected Source store.</h5>
+            <h5 className="font-bold mt-0 text-color-secondary">Manage how your products sync with your connected Destination store.</h5>
             <div className="grid p-fluid">
                 <div className="col-12 md:col-3 product-settings-tab">
                     <TabMenu model={items} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} />
@@ -39,4 +34,4 @@ const ProductSettings = () => {
     )
 }
 
-export default ProductSettings
+export default ProductDestinationSettings

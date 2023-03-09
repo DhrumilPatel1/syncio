@@ -12,7 +12,7 @@ const ProductDestination = () => {
     const [value, setValue] = useState([])
 
 
-    const items = Array.from({ length: 20 }).map((_, i) => ({ label: `Item #${i}`, value: i }));
+    // const items = Array.from({ length: 20 }).map((_, i) => ({ label: `Item #${i}`, value: i }));
 
 
     // const searchItems = (event) => {
@@ -42,12 +42,10 @@ const ProductDestination = () => {
         </div>
     );
 
-    const cities = [
-        { label: 'New York', value: 'NY' },
-        { label: 'Rome', value: 'RM' },
-        { label: 'London', value: 'LDN' },
-        { label: 'Istanbul', value: 'IST' },
-        { label: 'Paris', value: 'PRS' }
+    const items = [
+        { label: 'modernrusticdiamond.myshopify.com', value: 'modernrusticdiamond.myshopify.com' },
+        { label: 'think-dev-test.myshopify.com', value: 'think-dev-test.myshopify.com' },
+
     ];
 
     return (
@@ -63,10 +61,7 @@ const ProductDestination = () => {
                         </Fieldset>
                     </span> */}
                     <Fieldset legend={legendTemplate}>
-                        <span className="p-float-label">
-                            <Dropdown id="multiselect" options={cities} value={value} onChange={(e) => setValue(e.value)} optionLabel="label" />
-                            <label htmlFor="multiselect">Select a Destination store</label>
-                        </span>
+                        <Dropdown id="multiselect" options={items} value={value} onChange={(e) => setValue(e.value)} optionLabel="label" />
                     </Fieldset>
                 </div>
             </div>
