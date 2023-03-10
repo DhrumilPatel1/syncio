@@ -24,11 +24,11 @@ const DestinationDataTable = () => {
         setSubmitted(false);
     };
 
-    const editProduct = (product) => {};
+    const editProduct = (product) => { };
 
-    const confirmDeleteProduct = (product) => {};
+    const confirmDeleteProduct = (product) => { };
 
-    const confirmDeleteSelected = () => {};
+    const confirmDeleteSelected = () => { };
 
     const leftToolbarTemplate = () => {
         return (
@@ -97,8 +97,8 @@ const DestinationDataTable = () => {
     const actionBodyTemplate = (rowData) => {
         return (
             <div className="actions">
-                <Button icon="pi pi-pencil" className="p-button-rounded p-button-success mr-2" onClick={() => editProduct(rowData)} />
-                <Button icon="pi pi-trash" className="p-button-rounded p-button-warning mt-2" onClick={() => confirmDeleteProduct(rowData)} />
+                <Button icon="pi pi-sitemap" className="p-button-rounded p-button-info mr-2" onClick={() => editProduct(rowData)} />
+                <Button icon="pi pi-link" className="p-button-rounded p-button-secondary mt-2" onClick={() => confirmDeleteProduct(rowData)} />
             </div>
         );
     };

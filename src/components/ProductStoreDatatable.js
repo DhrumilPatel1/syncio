@@ -36,7 +36,7 @@ const ProductStoreDatatable = () => {
         { name: 'All', code: 'all' },
         { name: 'Diamond', code: 'diamond' },
     ];
-    
+
     const status = [
         { name: 'All', code: 'all' },
         { name: 'Synced', code: 'synced' },
