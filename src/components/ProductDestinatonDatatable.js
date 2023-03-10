@@ -167,7 +167,7 @@ const ProductDestinatonDatatable = () => {
                         <h5 className='my-0 ml-4 font-bold text-color-secondary'>Hide 0 Stock Products</h5>
                     </div>
                     <DataTable
-                        scrollHeight="300px"
+                        scrollHeight="350px"
                         ref={dt}
                         size="small"
                         value={products}
@@ -177,7 +177,7 @@ const ProductDestinatonDatatable = () => {
                         paginator
                         rows={5}
                         rowsPerPageOptions={[5, 10, 25]}
-                        className="datatable-responsive"
+                        className="datatable-responsive datatable_container"
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
                         globalFilter={globalFilter}

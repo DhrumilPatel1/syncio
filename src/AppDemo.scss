@@ -814,6 +814,12 @@ pre[class*='language-'] {
     border-top-left-radius: 0px !important;
 }
 
+.datatable_container .p-datatable-thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 // .product-settings-tab .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
 //     border-color: #673AB7;
 //     color: #673AB7;

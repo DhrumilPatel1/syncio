@@ -125,6 +125,7 @@ const DestinationDataTable = () => {
 
                     <DataTable
                         ref={dt}
+                        scrollHeight="350px"
                         size="small"
                         value={products}
                         selection={selectedProducts}
@@ -133,7 +134,7 @@ const DestinationDataTable = () => {
                         paginator
                         rows={5}
                         rowsPerPageOptions={[5, 10, 25]}
-                        className="datatable-responsive"
+                        className="datatable-responsive datatable_container"
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
                         globalFilter={globalFilter}
